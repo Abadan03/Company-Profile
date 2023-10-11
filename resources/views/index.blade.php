@@ -8,9 +8,9 @@
         <div class="row align-items-center">
             <div class="col-sm-12 col-md-6">
                 <div class="hero-text">
-                    <h1>Elevate Your Ritual with STHIRA: </h1>
+                    <h1>Your Self Confidence Recipe</h1>
                     <p>
-                        Unveiling the Essence of Strength and Timeless Beauty in Body Care
+                        Fresh Embrace Deodorant Spray!
                     </p>
                     <div class="hero-btn">
                         <a class="btn" href="">Join Now</a>
@@ -43,14 +43,14 @@
             <div class="col-lg-7 col-md-6">
                 <div class="section-header text-left">
                     <p>Learn About Us</p>
-                    <h2>Welcome to Yooga</h2>
+                    <h2>Solusi Inovasi Terbaru Untuk Prodak Deodorant-mu</h2>
                 </div>
                 <div class="about-text">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                        Didirikan dengan keyakinan bahwa alam memiliki jawaban terbaik untuk perawatan tubuh, Sthira berkomitmen menyediakan produk yang efektif, alami, dan aman. Nama 'Sthira', yang berarti 'teguh' dalam Sanskerta, mencerminkan tekad kami untuk selalu menyediakan kualitas terbaik dalam setiap produk. 
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                        Kami mengedepankan penelitian dan inovasi, memastikan bahwa setiap bahan yang digunakan tidak hanya bersumber dari alam tetapi juga memiliki manfaat nyata untuk kulit. Dari tawas hingga rose water, setiap komponen dipilih dengan hati-hati untuk menciptakan solusi perawatan tubuh yang optimal. Di Sthira, kami percaya bahwa kecantikan dan kesehatan berjalan beriringan. Kami bangga menjadi bagian dari rutinitas perawatan Anda dan berkomitmen untuk terus mendorong batas keunggulan produk alami. 
                     </p>
                     <a class="btn" href="">Learn More</a>
                 </div>
@@ -70,11 +70,13 @@
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                <img src="{{ Vite::asset('resources/images/production_image/yuka-product-108.jpg') }}" style="width:100%; opacity: 1" alt="img_about">
                 <div class="service-item">
-                    <div class="service-icon">
+                    {{-- <div class="service-icon">
                         <i class="flaticon-workout"></i>
-                    </div>
-                    <h3>Heal emotions</h3>
+                        <img src="{{ Vite::asset('resources/images/production_image/yuka-product-108.jpg') }}" style="border-radius: 8px; width:100%" alt="img_about">
+                    </div> --}}
+                    <h3>Odorless</h3>
                     <p>
                         Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
                     </p>
