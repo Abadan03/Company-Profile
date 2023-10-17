@@ -27,7 +27,7 @@
 </head>
 <body>
     <!-- Top Bar Start -->
-    <div class="top-bar d-none d-md-block">
+    {{-- <div class="top-bar d-none d-md-block">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8">
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Top Bar End -->
 
     <!-- Nav Bar Start -->
@@ -74,9 +74,9 @@
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="service.html" class="nav-item nav-link">Service</a>
                     <a href="price.html" class="nav-item nav-link">Price</a>
-                    <a href="class.html" class="nav-item nav-link">Class</a>
-                    <a href="team.html" class="nav-item nav-link">Trainer</a>
-                    <a href="portfolio.html" class="nav-item nav-link">Pose</a>
+                    {{-- <a href="class.html" class="nav-item nav-link">Class</a> --}}
+                    {{-- <a href="team.html" class="nav-item nav-link">Trainer</a> --}}
+                    {{-- <a href="portfolio.html" class="nav-item nav-link">Pose</a> --}}
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
                         <div class="dropdown-menu">
@@ -100,8 +100,10 @@
         <div class="container-fluid">
             <div class="container">
                 <div class="footer-info">
-                    <a href="index.html" class="footer-logo">Y<span>oo</span>ga</a>
-                    <h3>123 Street, New York, USA</h3>
+                    {{-- <a href="index.html" class="footer-logo">Y<span>oo</span>ga</a> --}}
+                    <img src="{{ Vite::asset('resources/images/production_image/Logo_PNG.png') }}" class="text-white" alt="logo" style="width: 128px; color: white" alt="">
+                    <h3>Get to Know us More</h3>
+                    {{-- <h3>123 Street, New York, USA</h3> --}}
                     <div class="footer-menu">
                         <p>+012 345 67890</p>
                         <p>info@example.com</p>
@@ -118,10 +120,10 @@
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                        <p>&copy; <a href="#">Sthiraofficial</a>, All Right Reserved.</p>
                     </div>
                     <div class="col-md-6">
-                        <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                        <p>Designed By <a href="https://htmlcodex.com">Sthira Teams</a></p>
                     </div>
                 </div>
             </div>

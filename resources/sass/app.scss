@@ -1932,12 +1932,15 @@ a:focus {
 .footer {
     position: relative;
     margin-top: 45px;
-    background: #000000;
+    background: #001F3F;
+    color: #000000;
 }
 
 .footer .container-fluid {
     padding: 90px 0 0 0;
-    background: linear-gradient(rgba(52, 49, 72, .9), rgba(52, 49, 72, .9)), url(../img/footer-bg.png);
+    // background: linear-gradient(rgba(52, 49, 72, .9), rgba(52, 49, 72, .9)), url(../img/footer-bg.png);
+    background: #f3f6ff;
+    // background: #333;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1951,7 +1954,8 @@ a:focus {
 
 .footer .footer-info .footer-logo {
     display: inline-block;
-    color: #F7CAC9;
+    // color: #F7CAC9;
+    color: black;
     font-size: 60px;
     line-height: 60px;
     font-weight: 700;
@@ -1961,7 +1965,8 @@ a:focus {
 }
 
 .footer .footer-info .footer-logo span {
-    color: #ffffff;
+    // color: #ffffff;
+    color: black;
     text-transform: lowercase;
 }
 
@@ -1969,7 +1974,8 @@ a:focus {
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: 600;
-    color: #ffffff;
+    // color: #ffffff;
+    color: black;
 }
 
 .footer .footer-menu {
@@ -1979,7 +1985,8 @@ a:focus {
 }
 
 .footer .footer-menu p {
-    color: #ffffff;
+    // color: #ffffff;
+    color: black;
     font-size: 20px;
     font-weight: 600;
     line-height: 20px;
@@ -2003,7 +2010,8 @@ a:focus {
 .footer .footer-social a i {
     margin-right: 15px;
     font-size: 20px;
-    color: #ffffff;
+    // color: #ffffff;
+    color: black;
     transition: .3s;
 }
 
@@ -2028,7 +2036,8 @@ a:focus {
 
 .footer .copyright p {
     margin: 0;
-    color: #ffffff;
+    // color: #ffffff;
+    color: black;
 }
 
 .footer .copyright .col-md-6:last-child p {
@@ -2036,7 +2045,8 @@ a:focus {
 }
 
 .footer .copyright p a {
-    color: #ffffff;
+    // color: #ffffff;
+    color: black;
     font-weight: 600;
 }
 

@@ -1,6 +1,9 @@
 @extends('layouts.defaults')
 @section('content')
+<?php 
 
+    
+?>
 
 <!-- Hero Start -->
 <div class="hero">
@@ -13,7 +16,7 @@
                         Fresh Embrace Deodorant Spray!
                     </p>
                     <div class="hero-btn">
-                        <a class="btn" href="">Join Now</a>
+                        {{-- <a class="btn" href="">Join Now</a> --}}
                         <a class="btn" href="">Contact Us</a>
                     </div>
                 </div>
@@ -65,78 +68,99 @@
 <div class="service">
     <div class="container">
         <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-            <p>What we do</p>
-            <h2>Yoga For Health</h2>
+            <p>Self Confidence Recipe</p>
+            <h2>Benefits Deodorant Spray Tawas</h2>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
-                <img src="{{ Vite::asset('resources/images/production_image/yuka-product-108.jpg') }}" style="width:100%; opacity: 1" alt="img_about">
-                <div class="service-item">
-                    {{-- <div class="service-icon">
-                        <i class="flaticon-workout"></i>
-                        <img src="{{ Vite::asset('resources/images/production_image/yuka-product-108.jpg') }}" style="border-radius: 8px; width:100%" alt="img_about">
-                    </div> --}}
-                    <h3>Odorless</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-                    </p>
+            @for ($i = 1; $i <= 6; $i++)
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="service-item card dynamic-card" onmouseover="showDescription(this, '{{ $i }}')" onmouseout="hideDescription(this)">
+                        {{-- <img src="{{ Vite::asset('resources/images/production_image/{{ $i }}.png') }}" style="border-radius: 8px; width: 126" alt="img_about"> --}}
+                        <img src="{{ Vite::asset('resources/images/production_image/' . $i . '.png') }}" style="border-radius: 8px; width: 126" alt="img_about">
+                        {{-- <div class="service-icon">
+                            <i class="flaticon-workout"></i>
+                        </div> --}}
+                        <h3 class="mt-4">
+                            @if ($i == 1)
+                                Odorless
+                            @elseif ($i == 2)
+                                Anti Yellow Stain 
+                            @elseif ($i == 3)
+                                Brightening
+                            @elseif ($i == 4)
+                                Anti-Chicken Skin 
+                            @elseif ($i == 5)
+                                Non-Sticky & Non-Comedogenic 
+                            @elseif ($i == 6)
+                                Soft Fragrance 
+                            @endif
+                        </h3>
+                        <p class="description-overlay">
+                            Hover me!
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            @endfor
+            {{-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <img src="{{ Vite::asset('resources/images/production_image/yuka-product-80.jpg') }}" style="width:100%; opacity: 1" alt="img_about">
                 <div class="service-item active">
                     <div class="service-icon">
                         <i class="flaticon-workout-1"></i>
                     </div>
-                    <h3>Body Refreshes</h3>
+                    <h3>Anti Yellow Stain</h3>
                     <p>
-                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                        Tidak Menyebabkan Noda Kuning Dan Noda Putih Di Pakaian
                     </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <img src="{{ Vite::asset('resources/images/production_image/yuka-product-56.jpg') }}" style="width:100%; opacity: 1" alt="img_about">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="flaticon-workout-2"></i>
                     </div>
-                    <h3>Mind & Serenity</h3>
+                    <h3>Brightening</h3>
                     <p>
-                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                        Mencerahkan Kulit Ketiak
                     </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                <img src="{{ Vite::asset('resources/images/production_image/yuka-product-56.jpg') }}" style="width:100%; opacity: 1" alt="img_about">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="flaticon-workout-3"></i>
                     </div>
-                    <h3>Enjoy Your life</h3>
+                    <h3>Anti-Chicken Skin</h3>
                     <p>
-                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                        Menghaluskan Kulit Ketiak Akibat Penggunaan Cukur Dan Waxing
                     </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                <img src="{{ Vite::asset('resources/images/production_image/yuka-product-31.jpg') }}" style="width:100%; opacity: 1" alt="img_about">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="flaticon-workout-4"></i>
                     </div>
-                    <h3>Body & Spirituality</h3>
+                    <h3>Non-Sticky & Non-Comedogenic</h3>
                     <p>
-                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                        Tidak menimbulkan rasa lengket di kulit dan tidak menyebabkan jerawat
                     </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                <img src="{{ Vite::asset('resources/images/production_image/yuka-product-59.jpg') }}" style="width:100%;  opacity: 1" alt="img_about">
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="flaticon-yoga-pose"></i>
                     </div>
-                    <h3>Body & Mind</h3>
+                    <h3>Soft Fragrance</h3>
                     <p>
-                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                        Memiliki aroma Ocean Fresh yang segar dan lembut
                     </p>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
@@ -147,16 +171,16 @@
 <div class="class">
     <div class="container">
         <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-            <p>Our Classes</p>
-            <h2>Yoga Class Shedule</h2>
+            <p>Discover Your Glow</p>
+            <h2>Our Catalog</h2>
         </div>
         <div class="row">
             <div class="col-12">
                 <ul id="class-filter">
-                    <li data-filter="*" class="filter-active">All Classes</li>
-                    <li data-filter=".filter-1">Pilates Yoga</li>
+                    <li data-filter="*" class="filter-active">All Catalog</li>
+                    {{-- <li data-filter=".filter-1">Pilates Yoga</li>
                     <li data-filter=".filter-2">Hatha Yoga</li>
-                    <li data-filter=".filter-3">Vinyasa yoga</li>
+                    <li data-filter=".filter-3">Vinyasa yoga</li> --}}
                 </ul>
             </div>
         </div>
@@ -164,20 +188,46 @@
             <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
                 <div class="class-wrap">
                     <div class="class-img">
-                        {{-- <img src="img/class-1.jpg" alt="Image"> --}}
-                        <img src="{{ Vite::asset('resources/images/class-1.jpg') }}" alt="img_class-1">
+                        
+                        {{-- <img src="{{ Vite::asset('resources/images/class-1.jpg') }}" alt="img_class-1"> --}}
+                        <img src="{{ Vite::asset('resources/images/production_image/yuka-product-60.jpg') }}" style="width:100%; opacity: 1" alt="img_about">
                     </div>
                     <div class="class-text">
                         <div class="class-teacher">
-                            {{-- <img src="img/teacher-1.png" alt="Image"> --}}
+                         
                             <img src="{{ Vite::asset('resources/images/teacher-1.png') }}" alt="img_teacher-1">
                             <h3>Elise Moran</h3>
                             <a href="">+</a>
                         </div>
-                        <h2>Pilates Yoga</h2>
+                        <h2>Deodorant Spray 100ml</h2>
                         <div class="class-meta">
-                            <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
-                            <p><i class="far fa-clock"></i>9:00 - 10:00</p>
+                            <p>Deodorant berbasis tawas yang diformulasikan khusus untuk mengatasi bau badan, </p>
+                            <a href="" type="button" class="" data-toggle="modal" data-target="#catalog1" style="color: blue">Read More</a>
+                            {{-- <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                            <p><i class="far fa-clock"></i>9:00 - 10:00</p> --}}
+                            <div class="modal" id="catalog1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Deodorant Spray 100ml</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                
+                                        <!-- Modal Body -->
+                                        <div class="modal-body">
+                                            <p>Deodorant berbasis tawas yang diformulasikan khusus untuk mengatasi bau badan, tanpa meninggalkan noda kuning pada pakaian. Diperkaya dengan Niacinamide, memberikan perawatan tambahan untuk kulit ketiak yang lebih cerah. Dilengkapi dengan aroma Ocean Fresh yang memberikan efek segar dan soft</p>
+                                        </div>
+                                
+                                        <!-- Modal Footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                            </div>                             
                         </div>
                     </div>
                 </div>
@@ -185,33 +235,59 @@
             <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="class-wrap">
                     <div class="class-img">
-                        {{-- <img src="img/class-2.jpg" alt="Image"> --}}
-                        <img src="{{ Vite::asset('resources/images/class-2.jpg') }}" alt="class-2">
+                      
+                        {{-- <img src="{{ Vite::asset('resources/images/class-2.jpg') }}" alt="class-2"> --}}
+                        <img src="{{ Vite::asset('resources/images/production_image/yuka-product-28.jpg') }}" style="max-width: 500px; max-height: 350px; opacity: 1" alt="img_about">
                     </div>
                     <div class="class-text">
                         <div class="class-teacher">
-                            {{-- <img src="img/teacher-2.png" alt="Image"> --}}
+                        
                             <img src="{{ Vite::asset('resources/images/teacher-2.png') }}" alt="teacher-2">
                             <h3>Kate Glover</h3>
                             <a href="">+</a>
                         </div>
-                        <h2>Iyengar Yoga</h2>
+                        <h2>Deodorant Spray 60ml</h2>
                         <div class="class-meta">
-                            <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
-                            <p><i class="far fa-clock"></i>9:00 - 10:00</p>
+                            {{-- <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                            <p><i class="far fa-clock"></i>9:00 - 10:00</p> --}}
+                            <p>Deodorant berbasis tawas yang diformulasikan khusus untuk mengatasi bau badan, </p>
+                            <a href="" type="button" class="" data-toggle="modal" data-target="#catalog2" style="color: blue">Read More</a>
+                            <div class="modal" id="catalog2">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Deodorant Spray 60ml</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                
+                                        <!-- Modal Body -->
+                                        <div class="modal-body">
+                                            <p>Deodorant berbasis tawas yang diformulasikan khusus untuk mengatasi bau badan, tanpa meninggalkan noda kuning pada pakaian. Diperkaya dengan Niacinamide, memberikan perawatan tambahan untuk kulit ketiak yang lebih cerah. Dilengkapi dengan aroma Ocean Fresh yang memberikan efek segar dan soft</p>
+                                        </div>
+                                
+                                        <!-- Modal Footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                            </div>     
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
+            {{-- <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="class-wrap">
                     <div class="class-img">
-                        {{-- <img src="img/class-3.jpg" alt="Image"> --}}
+               
                         <img src="{{ Vite::asset('resources/images/class-3.jpg') }}" alt="class-3">
                     </div>
                     <div class="class-text">
                         <div class="class-teacher">
-                            {{-- <img src="img/teacher-3.png" alt="Image"> --}}
+                          
                             <img src="{{ Vite::asset('resources/images/teacher-3.png') }}" alt="img_teacher-3">
                             <h3>Elina Ekman</h3>
                             <a href="">+</a>
@@ -227,12 +303,12 @@
             <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="class-wrap">
                     <div class="class-img">
-                        {{-- <img src="img/class-4.jpg" alt="Image"> --}}
+             
                         <img src="{{ Vite::asset('resources/images/class-4.jpg') }}" alt="class-4">
                     </div>
                     <div class="class-text">
                         <div class="class-teacher">
-                            {{-- <img src="img/teacher-4.png" alt="Image"> --}}
+                         
                             <img src="{{ Vite::asset('resources/images/teacher-4.png') }}" alt="teacher-4">
                             <h3>Lilly Fry</h3>
                             <a href="">+</a>
@@ -248,12 +324,12 @@
             <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
                 <div class="class-wrap">
                     <div class="class-img">
-                        {{-- <img src="img/class-5.jpg" alt="Image"> --}}
+                        
                         <img src="{{ Vite::asset('resources/images/class-5.jpg') }}" alt="class-5">
                     </div>
                     <div class="class-text">
                         <div class="class-teacher">
-                            {{-- <img src="img/teacher-5.png" alt="Image"> --}}
+          
                             <img src="{{ Vite::asset('resources/images/teacher-5.png') }}" alt="teacher-5">
                             <h3>Olivia Yates</h3>
                             <a href="">+</a>
@@ -269,12 +345,12 @@
             <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="1s">
                 <div class="class-wrap">
                     <div class="class-img">
-                        {{-- <img src="img/class-6.jpg" alt="Image"> --}}
+     
                         <img src="{{ Vite::asset('resources/images/class-6.jpg') }}" alt="class-6">
                     </div>
                     <div class="class-text">
                         <div class="class-teacher">
-                            {{-- <img src="img/teacher-6.png" alt="Image"> --}}
+                
                             <img src="{{ Vite::asset('resources/images/teacher-6.png') }}" alt="teacher-6">
                             <h3>Millie Harper</h3>
                             <a href="">+</a>
@@ -286,7 +362,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
@@ -297,14 +373,14 @@
 <div class="discount wow zoomIn" data-wow-delay="0.1s">
     <div class="container">
         <div class="section-header text-center">
-            <p>Awesome Discount</p>
-            <h2>Get <span>30%</span> Discount for all Classes</h2>
+            <p>Become Our Reseller</p>
+            <h2>Dapatkan Harga Spesial untuk Reseller</h2>
         </div>
         <div class="container discount-text">
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
+                Hubungi Admin Reseller : (+62) 0813-3354-0423
             </p>
-            <a class="btn">Join Now</a>
+            <a class="btn">Click To Message</a>
         </div>
     </div>
 </div>
@@ -315,92 +391,126 @@
 <div class="price">
     <div class="container">
         <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-            <p>Yoga Package</p>
-            <h2>Yoga Pricing Plan</h2>
+            <p>Hero Ingredients</p>
+            <h2>Culinary Marvels: Unveiling the Hero Ingredients</h2>
         </div>
         <div class="row">
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
                 <div class="price-item">
                     <div class="price-header">
                         <div class="price-title">
-                            <h2>Basic</h2>
+                            <h2>Rose Water</h2>
                         </div>
                         <div class="price-prices">
-                            <h2><small>$</small>49<span>/ mo</span></h2>
+                            {{-- <h2><small>$</small>49<span>/ mo</span></h2> --}}
+                            {{-- <h2><small>$</small>12</h2> --}}
+                            <h6 style="color: #">Melembapkan dan menyegarkan kulit</h6>
                         </div>
                     </div>
                     <div class="price-body">
                         <div class="price-description">
                             <ul>
-                                <li>Personal Trainer</li>
-                                <li>Special Class</li>
-                                <li>Free Tutorials</li>
-                                <li>Group Training</li>
+                                {{-- <li>Melembapkan dan menyegarkan kulit</li> --}}
+                                <li>Formula khusus untuk melembapkan kulit secara intensif</li>
+                                <li>Menyegarkan kulit dengan kelembapan alami</li>
+                                <li>Menyegarkan kulit secara optimal dan menyeluruh</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="price-footer">
+                    {{-- <div class="price-footer">
                         <div class="price-action">
-                            <a class="btn" href="">Join Now</a>
+                            <a class="btn" href="">Buy Now</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="price-item featured-item">
                     <div class="price-header">
-                        <div class="price-status">
+                        {{-- <div class="price-status">
                             <span>Popular</span>
-                        </div>
+                        </div> --}}
                         <div class="price-title">
-                            <h2>Standard</h2>
+                            <h2>Tea Tree Oil</h2>
                         </div>
                         <div class="price-prices">
-                            <h2><small>$</small>99<span>/ mo</span></h2>
+                            {{-- <h2><small>$</small>99<span>/ mo</span></h2> --}}
+                            {{-- <h2><small>$</small>14</h2> --}}
+                            <h6 style="color: #eeeeee">Antibakteri alami yang melawan bau badan</h6>
                         </div>
                     </div>
                     <div class="price-body">
                         <div class="price-description">
                             <ul>
-                                <li>Personal Trainer</li>
-                                <li>Special Class</li>
-                                <li>Free Tutorials</li>
-                                <li>Group Training</li>
+                                <li>Keamanan dan kebersihan dari bahan antibakteri alami</li>
+                                <li>Menjaga kesegaran sepanjang hari dengan perlindungan antibakteri</li>
+                                <li>Mengatasi bau badan dengan kebaikan antibakteri alami</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="price-footer">
+                    {{-- <div class="price-footer">
                         <div class="price-action">
                             <a class="btn" href="">Join Now</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="price-item">
                     <div class="price-header">
                         <div class="price-title">
-                            <h2>Premium</h2>
+                            <h2>Niacinamide</h2>
                         </div>
                         <div class="price-prices">
-                            <h2><small>$</small>149<span>/ mo</span></h2>
+                            {{-- <h2><small>$</small>149<span>/ mo</span></h2> --}}
+                            {{-- <h2><small>$</small>12</h2> --}}
+                            <h6>Mencerahkan dan mengurangi dark spot di ketiak</h6>
                         </div>
                     </div>
                     <div class="price-body">
                         <div class="price-description">
                             <ul>
-                                <li>Personal Trainer</li>
-                                <li>Special Class</li>
-                                <li>Free Tutorials</li>
-                                <li>Group Training</li>
+                                <li>Menyediakan solusi terbaik untuk mengatasi masalah dark spot pada ketiak</li>
+                                <li>Mencerahkan dan menyamarkan area ketiak agar kulit tampak lebih bersinar</li>
+                                <li>Mencerahkan kulit ketiak sambil mengurangi pigmentasi yang tidak diinginkan</li>
+                                {{-- <li>Group Training</li> --}}
                             </ul>
                         </div>
                     </div>
-                    <div class="price-footer">
+                    {{-- <div class="price-footer">
                         <div class="price-action">
                             <a class="btn" href="">Join Now</a>
                         </div>
+                    </div> --}}
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="price-item">
+                    <div class="price-header">
+                        <div class="price-title">
+                            <h2>Decalact Deo</h2>
+                        </div>
+                        <div class="price-prices">
+                            {{-- <h2><small>$</small>149<span>/ mo</span></h2> --}}
+                            {{-- <h2><small>$</small>12</h2> --}}
+                            <h6>Perlindungan jangka panjang tanpa keringat</h6>
+                        </div>
                     </div>
+                    <div class="price-body">
+                        <div class="price-description">
+                            <ul>
+                                <li>Menyediakan perlindungan optimal tanpa membuat kulit terasa kering</li>
+                                <li>Perlindungan jangka panjang yang tidak meninggalkan rasa lengket atau basah</li>
+                                <li>Melindungi tanpa membuat kulit terasa kering atau kurang nyaman</li>
+                                {{-- <li>Group Training</li> --}}
+                            </ul>
+                        </div>
+                    </div>
+                    {{-- <div class="price-footer">
+                        <div class="price-action">
+                            <a class="btn" href="">Join Now</a>
+                        </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -472,7 +582,7 @@
 
 
 <!-- Team Start -->
-<div class="team">
+{{-- <div class="team">
     <div class="container">
         <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
             <p>Yoga Trainer</p>
@@ -482,7 +592,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
                 <div class="team-item">
                     <div class="team-img">
-                        {{-- <img src="img/team-1.jpg" alt="Image"> --}}
+                     
                         <img src="{{ Vite::asset('resources/images/team-1.jpg') }}" alt="team-1">
                         <div class="team-social">
                             <a href=""><i class="fab fa-twitter"></i></a>
@@ -500,7 +610,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="team-item">
                     <div class="team-img">
-                        {{-- <img src="img/team-2.jpg" alt="Image"> --}}
+                
                         <img src="{{ Vite::asset('resources/images/team-2.jpg') }}" alt="team-2">
                         <div class="team-social">
                             <a href=""><i class="fab fa-twitter"></i></a>
@@ -518,7 +628,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="team-item">
                     <div class="team-img">
-                        {{-- <img src="img/team-3.jpg" alt="Image"> --}}
+              
                         <img src="{{ Vite::asset('resources/images/team-3.jpg') }}" alt="team-3">
                         <div class="team-social">
                             <a href=""><i class="fab fa-twitter"></i></a>
@@ -536,7 +646,7 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="team-item">
                     <div class="team-img">
-                        {{-- <img src="img/team-4.jpg" alt="Image"> --}}
+                       
                         <img src="{{ Vite::asset('resources/images/team-4.jpg') }}" alt="team-4">
                         <div class="team-social">
                             <a href=""><i class="fab fa-twitter"></i></a>
@@ -553,7 +663,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Team End -->
 
 
@@ -686,6 +796,41 @@
     AOS.init();
 </script>
 
+<script>
+  
+    const dynamicCards = document.querySelectorAll('.dynamic-card');
+
+// Add event listeners to each dynamic card
+function showDescription(card, i) {
+        const descriptionOverlay = card.querySelector('.description-overlay');
+        const description = getDescription(i);
+        descriptionOverlay.textContent = description || 'Hover me!';
+    }
+
+    function hideDescription(card) {
+        const descriptionOverlay = card.querySelector('.description-overlay');
+        descriptionOverlay.textContent = 'Hover me!';
+    }
+
+    function getDescription(i) {
+        switch (parseInt(i)) {
+            case 1:
+                return 'Membunuh Kuman Penyebab Bau Badan';
+            case 2:
+                return 'Tidak Menyebabkan Noda Kuning Dan Noda Putih Di Pakaian';
+            case 3:
+                return 'Mencerahkan Kulit Ketiak';
+            case 4:
+                return 'Menghaluskan Kulit Ketiak Akibat Penggunaan Cukur Dan Waxing';
+            case 5:
+                return 'Tidak menimbulkan rasa lengket di kulit dan tidak menyebabkan jerawat';
+            case 6:
+                return 'Memiliki aroma Ocean Fresh yang segar dan lembut';
+            default:
+                return '';
+        }
+    }
+</script>
 
 
 
